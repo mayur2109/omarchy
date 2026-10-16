@@ -37,6 +37,16 @@ o.window("(Alacritty|kitty|foot)", { scroll_touchpad = 1.5 })
 
 You can [see all the input options](https://wiki.hypr.land/Configuring/Basics/Variables/#input) on the Hyprland wiki for inputs.
 
+CapsLock works as a normal Caps Lock, and `Shift + CapsLock` is the compose key for [quick emojis](07-hotkeys.md#quick-emojis) and [other completions](07-hotkeys.md#quick-completions). If you'd rather have the compose key elsewhere, replace `omarchy:shift_caps_compose` in `kb_options`. For example, this moves the compose key to Right Alt:
+
+```lua
+hl.config({
+  input = {
+    kb_options = "compose:ralt",
+  },
+})
+```
+
 ### Logitech mouse buttons
 
 [OpenLogi](https://github.com/AprilNEA/OpenLogi) can configure supported Logitech mice, including mice paired directly over Bluetooth. Follow the [OpenLogi Linux installation guide](https://github.com/AprilNEA/OpenLogi/blob/master/docs/INSTALL-linux.md) to install a release package, set up its udev permissions, and enable the user agent. Quit Solaar or other Logitech device managers while using OpenLogi, since they can conflict over device access. If the mouse was connected while permissions were installed, power-cycle it so udev applies the rules.
@@ -53,17 +63,6 @@ Pair the mouse through Omarchy's Bluetooth settings, then select it in OpenLogi.
 | Thumb-wheel click | Toggle SmartShift |
 
 Button names and available actions vary by device and OpenLogi version. Configure actions in OpenLogi's device settings; another user's profile may refer to a different device identity. If remapped buttons stop working, check the Permissions page in OpenLogi and confirm its user agent is running.
-
-CapsLock works as a normal Caps Lock, and `Shift + CapsLock` is the compose key for [quick emojis](07-hotkeys.md#quick-emojis) and [other completions](07-hotkeys.md#quick-completions). If you'd rather have the compose key elsewhere, replace `omarchy:shift_caps_compose` in `kb_options`. For example, this moves the compose key to Right Alt:
-
-```lua
-hl.config({
-  input = {
-    kb_options = "compose:ralt",
-  },
-})
-```
-
 
 ### Trackpad gestures
 
