@@ -64,6 +64,7 @@ hl.config({
 })
 ```
 
+
 ### Trackpad gestures
 
 You can also turn on [touchpad gestures](https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/), like swiping with three fingers to change workspaces:
